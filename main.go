@@ -35,7 +35,7 @@ func main() {
 
 	w := wizard{}
 	w.Output = os.Stdout //output to stdout by default
-	//file, _ := os.Create("/tmp/test.md") //write to a file
+
 	if *outputFile != nil {
 		w.Output = *outputFile
 	}
