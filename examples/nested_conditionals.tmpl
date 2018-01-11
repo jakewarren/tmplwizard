@@ -1,0 +1,10 @@
+{{$stringVariable := .PromptString "Enter any string: " -}}
+The string you entered ({{$stringVariable}}) is now stored in a variable.
+
+{{ if .PromptBool "Do you want to expand the first section ---> " -}}
+This text appears if you confirm the first conditional.
+
+{{ if .PromptBool "Do you want to expand the nested conditional ---> " -}}
+This text only appears if you answered yes to both of the previous questions.
+{{end -}}
+{{end -}}
