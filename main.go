@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"text/template"
+	"time"
 
 	"github.com/AlecAivazis/survey"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
@@ -70,5 +71,12 @@ func (w wizard) PromptString(question string) string {
 	survey.AskOne(prompt, &answer, nil)
 	//return strings.TrimSpace(answer)
 	return answer
+
+}
+
+// FormatDate formats the current time based on a provided date format
+func (w wizard) FormatDate(format string) string {
+
+	return time.Now().Format(format)
 
 }
